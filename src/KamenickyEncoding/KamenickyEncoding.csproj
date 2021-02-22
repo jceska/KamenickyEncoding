@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Jirka Ceska</Authors>
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.4</Version>
+    <Description>Encoding of code page 895 (Kamenicky).</Description>
+    <PackageProjectUrl>https://github.com/jceska/KamenickyEncoding</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jceska/KamenickyEncoding</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>
