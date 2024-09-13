@@ -27,7 +27,7 @@
             {
                 var sourceChar = chars[charIndex + i];
 
-                if (CharMapping.CodePage895To437CharMapping.TryGetValue(sourceChar, out var convertedByte))
+                if (CharMapping.TryGetByte(sourceChar, out var convertedByte))
                 {
                     bytes[byteIndex + i] = convertedByte;
                 }
@@ -47,7 +47,7 @@
             {
                 var sourceByte = bytes[byteIndex + i];
 
-                if (CharMapping.CodePage895To437ByteMapping.TryGetValue(sourceByte, out var convertedChar))
+                if (CharMapping.TryGetChar(sourceByte, out var convertedChar))
                 {
                     chars[charIndex + i] = convertedChar;
                 }

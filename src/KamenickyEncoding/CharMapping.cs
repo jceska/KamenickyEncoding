@@ -4,7 +4,7 @@
 
     public class CharMapping
     {
-        public static readonly Dictionary<byte, char> CodePage895To437ByteMapping = new Dictionary<byte, char>
+        static readonly Dictionary<byte, char> ByteMappingDictionary = new Dictionary<byte, char>
         {
             { 136, 'ě'},
             { 150, 'ů'},
@@ -38,8 +38,8 @@
             { 134, 'Ť'},
             { 146, 'Ž'}
         };
-
-        public static readonly Dictionary<char, byte> CodePage895To437CharMapping = new Dictionary<char, byte>
+        
+        static readonly Dictionary<char, byte> CharMappingDictionary = new Dictionary<char, byte>
         {
             {'ě',136},
             {'ů',150},
@@ -73,5 +73,11 @@
             {'Ť',134},
             {'Ž',146}
         };
+        
+        public static bool TryGetChar(byte sourceByte, out char convertedChar)
+            => ByteMappingDictionary.TryGetValue(sourceByte, out convertedChar);
+        
+        public static bool TryGetByte(char sourceChar, out byte convertedByte)
+            => CharMappingDictionary.TryGetValue(sourceChar, out convertedByte);
     }
 }
