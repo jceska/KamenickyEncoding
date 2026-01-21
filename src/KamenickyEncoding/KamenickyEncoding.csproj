@@ -5,7 +5,7 @@
     <Authors>Jirka Ceska</Authors>
     <IsPackable>true</IsPackable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.8</Version>    
+    <Version>1.0.9</Version>    
 	  <Description>Kamenicky (KEYBCS2) encoding implementation for .NET. Supports Czech and Slovak characters (Code Page 895).</Description>
 	  <PackageTags>encoding;kamenicky;keybcs2;cp895;dos;czech;slovak</PackageTags>
     <PackageProjectUrl>https://github.com/jceska/KamenickyEncoding</PackageProjectUrl>
@@ -13,8 +13,12 @@
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
+<ItemGroup>
+  <None Include="../../README.md" Pack="true" PackagePath="" />
+</ItemGroup>
+
 <PropertyGroup>
-  <PackageReadmeFile>../../README.md</PackageReadmeFile>
+  <PackageReadmeFile>README.md</PackageReadmeFile>
 </PropertyGroup>
 
 	<ItemGroup>
