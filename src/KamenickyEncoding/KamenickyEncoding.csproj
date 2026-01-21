@@ -1,19 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+	<TargetFrameworks>netstandard2.0;net10.0</TargetFrameworks>
     <Authors>Jirka Ceska</Authors>
     <IsPackable>true</IsPackable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.6</Version>
-    <Description>Encoding of code page 895 (Kamenicky).</Description>
+    <Version>1.0.6</Version>    
+	  <Description>Kamenicky (KEYBCS2) encoding implementation for .NET. Supports Czech and Slovak characters (Code Page 895).</Description>
+	  <PackageTags>encoding;kamenicky;keybcs2;cp895;dos;czech;slovak</PackageTags>
     <PackageProjectUrl>https://github.com/jceska/KamenickyEncoding</PackageProjectUrl>
     <RepositoryUrl>https://github.com/jceska/KamenickyEncoding</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="System.Text.Encoding.CodePages" Version="8.0.0" />
-  </ItemGroup>
-
+	<ItemGroup>
+		<PackageReference Include="System.Text.Encoding.CodePages" Version="10.0.2" />
+	</ItemGroup>
 </Project>
